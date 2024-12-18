@@ -46,7 +46,6 @@ class Solution:
             for iter_word in strs:
                 if word not in iter_list:
                     iter_list.append(word)
-                is_anagram = False
                 if iter_index != word_index and len(word) == len(iter_word):
                     iter_letter_cnt = get_word_character_count(iter_word)
                     if iter_letter_cnt == charac_cnt:
@@ -54,7 +53,7 @@ class Solution:
                 iter_index += 1
             words_checked.append(word)
             if do_add_word_list_to_final(anagrams, iter_list):
-                anagrams.append(iter_list)
+                anagrams.append(sorted(iter_list))
             word_index += 1
         return anagrams
 
@@ -68,6 +67,25 @@ if __name__ == "__main__":
     # test_inputs = [([["bat"],["nat","tan"],["ate","eat","tea"]], ["eat","tea","tan","ate","nat","bat"])]
     # for test in test_inputs:
     #     main(test)
+    # test_input = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    # sol = Solution()
+    # print(sol.groupAnagrams(test_input))
     test_input = ["eat", "tea", "tan", "ate", "nat", "bat"]
+    expected_output = [["bat"],["nat","tan"],["ate","eat","tea"]]
     sol = Solution()
-    print(sol.groupAnagrams(test_input))
+    output = sol.groupAnagrams(test_input)
+    print(expected_output)
+
+    cnt = 0
+    for expected in expected_output:
+        is_in_expected = False
+        for actual in output:
+            if expected == actual:
+                is_in_expected = True
+                break
+        if is_in_expected:
+            cnt += 1
+    if cnt == len(expected_output):
+        print("Success")
+    else:
+        print("Fail")
