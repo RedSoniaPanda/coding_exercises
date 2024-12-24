@@ -10,3 +10,6 @@ Description can be found at https://leetcode.com/problems/design-tic-tac-toe/
 
 ## LRU Cache/Capacity - Hash
 https://leetcode.com/problems/lru-cache/
+
+## Merge Sorted Array - Two Pointers
+https://leetcode.com/problems/merge-sorted-array/description/
