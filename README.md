@@ -19,3 +19,6 @@ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/descri
 
 ## Valid Parenthesis - Stack - Easy
 https://leetcode.com/problems/valid-parentheses/description/
+
+## Design a Stack with an Increment Operation - Stack - Medium
+https://leetcode.com/problems/design-a-stack-with-increment-operation/
