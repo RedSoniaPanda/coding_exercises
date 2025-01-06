@@ -22,3 +22,6 @@ https://leetcode.com/problems/valid-parentheses/description/
 
 ## Design a Stack with an Increment Operation - Stack - Medium
 https://leetcode.com/problems/design-a-stack-with-increment-operation/
+
+## Intersection two arrays - Binary Search
+https://leetcode.com/problems/intersection-of-two-arrays/
