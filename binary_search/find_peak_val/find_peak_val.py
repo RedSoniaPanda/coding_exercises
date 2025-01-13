@@ -7,7 +7,7 @@ class Solution:
         if left == right:
             return left
         mid = (right + left) // 2
-        if nums[mid] < nums[mid + 1]:
+        if nums[mid] > nums[mid + 1]:
             # mid is not greater than the left neighbor
             return self.search(nums, left, mid)
         return self.search(nums, mid + 1, right)
@@ -33,5 +33,5 @@ def test_case_2():
 
 
 if __name__ == "__main__":
-    # test_case_1()
+    test_case_1()
     test_case_2()
