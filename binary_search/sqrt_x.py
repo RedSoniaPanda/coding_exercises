@@ -1,13 +1,13 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        if x == 0:
-            return 0
+        if x < 2:
+            return x
         # The square root is always smaller than x / 2
         # and larger than 0
         left = 2  # Minimum is always 2
         right = x // 2
         while left <= right:
-            mid = (left + right) // 2
+            mid = left + (right - left) // 2
             fact = mid * mid
             if fact == x:
                 return mid
